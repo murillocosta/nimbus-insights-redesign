@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Satellite, Mail, MapPin, Linkedin, Github, Twitter } from "lucide-react";
+import { Satellite, Mail, MapPin, Linkedin, Github, Instagram } from "lucide-react";
 import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const footerLinks = {
@@ -35,14 +35,14 @@ export function Footer() {
               Turning orbital data into decisions. Geospatial analytics and AI solutions for mining, environment, and land analysis.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors">
+              <a href="https://linkedin.com/company/nimbusinsights" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors">
+              <a href="https://github.com/nimbusinsights" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors">
                 <Github size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors">
-                <Twitter size={18} />
+              <a href="https://instagram.com/nimbusinsights" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors">
+                <Instagram size={18} />
               </a>
             </div>
           </div>
@@ -81,7 +81,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-primary mt-0.5" />
-                <span className="text-muted-foreground text-sm">contact@nimbusinsights.com</span>
+                <span className="text-muted-foreground text-sm">nimbusinsights@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary mt-0.5" />
