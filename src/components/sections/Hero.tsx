@@ -81,36 +81,40 @@ export function Hero() {
 
           {/* Logo Animation */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="order-1 lg:order-2 flex justify-center lg:justify-end"
           >
-            <div className="relative">
-              {/* Glow behind logo */}
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-[60px] scale-110" />
-              
-              {/* Rotating ring */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full border border-primary/20"
-                style={{ margin: "-20px" }}
+            <div className="relative group">
+              {/* Subtle glow behind logo - pulses slowly */}
+              <motion.div 
+                className="absolute inset-0 bg-primary/15 rounded-full blur-[80px] scale-125"
+                animate={{ opacity: [0.4, 0.6, 0.4] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               />
               
-              {/* Logo */}
-              <motion.img
+              {/* Outer ring - static with subtle opacity */}
+              <div 
+                className="absolute rounded-full border border-primary/10"
+                style={{ 
+                  inset: "-24px",
+                }}
+              />
+              
+              {/* Inner ring - very slow rotation */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+                className="absolute rounded-full border border-dashed border-primary/20"
+                style={{ inset: "-12px" }}
+              />
+              
+              {/* Logo - static, professional */}
+              <img
                 src={logoIcon}
                 alt="Nimbus Insights - Geospatial Analytics & Remote Sensing"
-                className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain drop-shadow-2xl"
-                animate={{ 
-                  y: [0, -10, 0],
-                }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
-                }}
+                className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain"
               />
             </div>
           </motion.div>
