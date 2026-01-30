@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Satellite, Mail, MapPin, Linkedin, Github, Twitter } from "lucide-react";
+import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const footerLinks = {
   company: [
@@ -23,13 +24,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="font-display font-bold text-primary-foreground text-lg">N</span>
-              </div>
-              <span className="font-display font-semibold text-xl text-foreground">
-                Nimbus<span className="text-primary">.</span>
-              </span>
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src={logoHorizontal} 
+                alt="Nimbus Insights - Remote Sensing & Geospatial Analytics" 
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Turning orbital data into decisions. Geospatial analytics and AI solutions for mining, environment, and land analysis.

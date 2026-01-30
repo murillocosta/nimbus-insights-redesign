@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoHorizontal from "@/assets/logo-horizontal.png";
+import logoIcon from "@/assets/logo-icon.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -21,13 +23,19 @@ export function Header() {
       <div className="container-main">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="font-display font-bold text-primary-foreground text-lg">N</span>
-            </div>
-            <span className="font-display font-semibold text-xl text-foreground">
-              Nimbus<span className="text-primary">.</span>
-            </span>
+          <Link to="/" className="flex items-center">
+            {/* Desktop: horizontal logo */}
+            <img 
+              src={logoHorizontal} 
+              alt="Nimbus Insights - Remote Sensing & Geospatial Analytics" 
+              className="hidden sm:block h-8 lg:h-10 w-auto"
+            />
+            {/* Mobile: icon only */}
+            <img 
+              src={logoIcon} 
+              alt="Nimbus Insights" 
+              className="block sm:hidden h-8 w-8"
+            />
           </Link>
 
           {/* Desktop Navigation */}
